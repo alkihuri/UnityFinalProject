@@ -13,7 +13,7 @@ public class ShootManager : MonoBehaviour
         {
             GameObject _gameObjectOnHitLine = _objectOnHitLine.transform.gameObject;
             Debug.DrawLine(transform.position, _gameObjectOnHitLine.transform.position, Color.red); 
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) && _gameObjectOnHitLine.GetComponent<DestoyebleObject>())
             {  
                 Destroy(_gameObjectOnHitLine);
             }
