@@ -12,8 +12,9 @@ public class ShootManager : MonoBehaviour
         if(Physics.Raycast(transform.position, transform.forward,out _objectOnHitLine))
         {
             GameObject _gameObjectOnHitLine = _objectOnHitLine.transform.gameObject;
+            Debug.DrawLine(transform.position, _gameObjectOnHitLine.transform.position, Color.red); 
             if(Input.GetMouseButtonDown(0))
-            {
+            {  
                 Destroy(_gameObjectOnHitLine);
             }
         }
