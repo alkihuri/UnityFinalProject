@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
         _cc.SimpleMove(directionOfMovement);
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
-        _camera.transform.Rotate(0, mouseX, 0);
+        transform.Rotate(0, mouseX * _speed, 0);
+        _camera.transform.Rotate(-mouseY*_speed, 0, 0);
     }
 }
