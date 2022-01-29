@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     CharacterController _cc;
     [SerializeField, Range(1,10)] float _speed = 1 ;
     [SerializeField] GameObject _camera;
+    [SerializeField] bool isMouseInvers = true;
     // Start is called before the first frame update
     void Start()
     { 
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         DoMovement(); 
         CursorModeSettings(); 
     }
@@ -30,7 +32,9 @@ public class Movement : MonoBehaviour
         _cc.SimpleMove(directionOfMovement);
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
-        _camera.transform.Rotate(0, mouseX, 0);
+        transform.Rotate(0, mouseX, 0);
+        mouseY = isMouseInvers ? -mouseY : mouseY; 
+        _camera.transform.Rotate(mouseY, 0, 0);
     }
 
     private static void CursorModeSettings()

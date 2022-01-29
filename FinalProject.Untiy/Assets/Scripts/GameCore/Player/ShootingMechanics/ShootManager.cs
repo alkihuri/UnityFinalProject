@@ -6,10 +6,13 @@ public class ShootManager : MonoBehaviour
 {
 
     RaycastHit _objectOnHitLine;
+    [SerializeField] GameObject _camera;
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Physics.Raycast(transform.position, transform.forward,out _objectOnHitLine))
+        Debug.DrawRay(transform.position, _camera.transform.localPosition, Color.yellow);
+
+        if (Physics.Raycast(transform.position, _camera.transform.forward,out _objectOnHitLine))
         {
             GameObject _gameObjectOnHitLine = _objectOnHitLine.transform.gameObject;
             Debug.DrawLine(transform.position, _gameObjectOnHitLine.transform.position, Color.red); 
