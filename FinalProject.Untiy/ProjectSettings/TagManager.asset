@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - FirstPersonLayer
   - Water
   - UI
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: FirstPersonLayer
+    uniqueID: 3346309269
+    locked: 1
   - name: Default
     uniqueID: 0
-    locked: 0
+    locked: 1
