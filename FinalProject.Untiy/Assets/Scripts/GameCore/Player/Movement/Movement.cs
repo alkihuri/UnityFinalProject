@@ -9,9 +9,13 @@ public class Movement : MonoBehaviour
     [SerializeField, Range(1,10)] float _speed = 1 ;
     [SerializeField] GameObject _camera;
     [SerializeField] bool isMouseInvers = true;
+    float delta = 0;
+    private Quaternion startRotation;
+
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        startRotation = transform.rotation;
         _cc = GetComponent<CharacterController>();
         _camera = GetComponentInChildren<Camera>().gameObject;
     }
@@ -35,6 +39,7 @@ public class Movement : MonoBehaviour
         transform.Rotate(0, mouseX, 0);
         mouseY = isMouseInvers ? -mouseY : mouseY; 
         _camera.transform.Rotate(mouseY, 0, 0);
+       
     }
 
     private static void CursorModeSettings()
