@@ -39,6 +39,15 @@ public class Movement : MonoBehaviour
         transform.Rotate(0, mouseX, 0);
         mouseY = isMouseInvers ? -mouseY : mouseY; 
         _camera.transform.Rotate(mouseY, 0, 0);
+
+        if(GetComponent<AnglesRestriction>().IsOk)
+        {
+            /// if is ok
+        }
+        else
+        {
+            /// 
+        }
        
     }
 
