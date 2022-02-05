@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DestoyebleObject : MonoBehaviour
 {
-    [SerializeField] GameObject _ps;
+    [SerializeField] GameObject _particleSystem;
     private void OnDestroy()
     {
-        GameObject ps = Instantiate(_ps);
+        GameObject ps = Instantiate(_particleSystem,transform.position,transform.rotation);
         Destroy(ps, 5);
     }
 }
