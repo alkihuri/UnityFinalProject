@@ -16,7 +16,7 @@ public class AnglesRestriction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _currentXCameraAngle = _camera.transform.localEulerAngles.x ;
+        _currentXCameraAngle = Mathf.Abs(_camera.transform.localEulerAngles.x);
         _currentClampedXCameraAngle = Mathf.Clamp(_currentXCameraAngle, -_xRestriction, _xRestriction);
         _isOk = _currentXCameraAngle < _xRestriction;
         
