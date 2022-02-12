@@ -546,11 +546,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299942489}
   m_CullTransparentMesh: 1
---- !u!1 &956498729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8243698097259645893, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-  m_PrefabInstance: {fileID: 8243698097679141100}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019244682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,28 +1435,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1913585788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8243698097185554971, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-  m_PrefabInstance: {fileID: 8243698097679141100}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1913585789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913585788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeeea9665ecb7414c898a0c6814fa866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 956498729}
-  _xRestriction: 45
-  _currentXCameraAngle: 0
-  _currentClampedXCameraAngle: 0
-  _isOk: 0
 --- !u!1001 &8243698097679141100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1469,6 +1442,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 636848889, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
+      propertyPath: _yAngleRestriction
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8243698097185554964, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
       propertyPath: m_RootOrder
       value: 2

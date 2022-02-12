@@ -7,10 +7,14 @@ public class Movement : MonoBehaviour
 
     CharacterController _cc;
     [SerializeField, Range(1,10)] float _speed = 1 ;
+
+    [SerializeField, Range(0, 45)] float _yAngleRestriction = 45;
     [SerializeField] GameObject _camera;
     [SerializeField] bool isMouseInvers = true;
     float delta = 0;
     private Quaternion startRotation;
+    private float yCameraAngle ; 
+    private float xCameraAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -37,18 +41,21 @@ public class Movement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         transform.Rotate(0, mouseX, 0);
-        mouseY = isMouseInvers ? -mouseY : mouseY; 
-        _camera.transform.Rotate(mouseY, 0, 0);
+        mouseY = isMouseInvers ? -mouseY : mouseY;
+        YAngleRestrictionFeature(mouseY);
 
-        if(GetComponent<AnglesRestriction>().IsOk)
-        {
-            /// if is ok
-        }
-        else
-        {
-            /// 
-        }
-       
+    }
+
+    private void YAngleRestrictionFeature(float mouseY)
+    {
+        yCameraAngle += mouseY;
+        xCameraAngle = transform.rotation.eulerAngles.y;
+        var clampedYCameraAngle = Mathf.Clamp(yCameraAngle, -_yAngleRestriction, _yAngleRestriction);
+        if (yCameraAngle > _yAngleRestriction)
+            yCameraAngle = _yAngleRestriction;
+        if (yCameraAngle < -_yAngleRestriction)
+            yCameraAngle = -_yAngleRestriction;
+        _camera.transform.rotation = Quaternion.Euler(clampedYCameraAngle, xCameraAngle, 0);
     }
 
     private static void CursorModeSettings()
