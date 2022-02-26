@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
-    CharacterController _cc;
-    [SerializeField, Range(1,10)] float _speed = 1 ;
-    [SerializeField] GameObject _camera;
-    // Start is called before the first frame update
-    void Start()
+    public CharacterController controller;
+    public float speed = 12f;
+    Vector3 velocity;
+    public float gravity = -9.81f;
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    bool isGrounded;
+    private void Update()
     {
-        _cc = GetComponent<CharacterController>();
-        _camera = GetComponentInChildren<Camera>().gameObject;
-    }
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal"); 
-        Vector3 directionOfMovement = (transform.forward * v + transform.right * h) * _speed;
-        _cc.SimpleMove(directionOfMovement);
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
-        _camera.transform.Rotate(0, mouseX, 0);
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        controller.Move(move * speed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
