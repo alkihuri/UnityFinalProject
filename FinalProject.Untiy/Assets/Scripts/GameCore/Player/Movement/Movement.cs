@@ -21,8 +21,21 @@ public class Movement : MonoBehaviour
             velocity.y = -2f;
         }
 
+
+        #if UNITY_EDITOR
+
+        #endif
+
+
+        #if UNITY_ANDROID
+
+        #endif
+
+
         float x = Input.GetAxis("Horizontal") + _joystick.Horizontal;
         float z = Input.GetAxis("Vertical") + _joystick.Vertical;
+
+
 
         Vector3 move = transform.right * x + transform.forward * z;
 
