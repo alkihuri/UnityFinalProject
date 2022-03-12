@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.29
+    agentRadius: 0.41
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 60
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.096666664
+    cellSize: 0.13666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -7381,22 +7381,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8170153791440283371, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170153791440283371, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170153791440283371, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 440.06274
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170153791440283371, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -518
-      objectReference: {fileID: 0}
     - target: {fileID: 8243698097185554964, guid: 9e7750ddb34eeab49ab27f57810d53f3, type: 3}
       propertyPath: m_RootOrder
       value: 4
