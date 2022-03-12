@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,7 +217,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &15134313
 GameObject:
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &107504803
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &299942489
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &1240143945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &1308402489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &1349067813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &1524078528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706c2491aaa1ad54e8f4fec54887b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 1874479720764245642, guid: bf32024a82c8fcb42b8d1068ec671b78, type: 3}
+  _particleSystem: {fileID: 6713506553272146919, guid: 01ead71a1b17c984199a36b8df4518cd, type: 3}
 --- !u!1 &1690561385
 GameObject:
   m_ObjectHideFlags: 0
