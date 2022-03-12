@@ -16,9 +16,9 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        //Input.GetAxis("Mouse X") + 
         //Input.GetAxis("Mouse Y") +
-        //Input.GetAxis("Mouse X") +
-        var universalHorizontal =  _joystick.Horizontal;
+        var universalHorizontal = _joystick.Horizontal;
         var universalVertical =  _joystick.Vertical;
         float mouseX = universalHorizontal * mouseSens * Time.deltaTime;
         float mouseY = universalVertical * mouseSens * Time.deltaTime;
