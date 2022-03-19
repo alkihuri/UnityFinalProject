@@ -21,7 +21,7 @@ public class RagdollController : MonoBehaviour
         {
             joint.gameObject.SetActive(stateToSet);
         }
-        GetComponent<Animator>().enabled = !stateToSet;
+        GetComponentInChildren<NpcAnimatorController>().enabled = !stateToSet;
     }
      
 }

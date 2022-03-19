@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,11 +13,37 @@ public class GameManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _maxNumOfNpc = 0;
+        _maxNumOfNpc = 15;
+        CheckNpcList();
     }
 
     public void CheckNpcList()
     {
-        if
+        
+
+
+        foreach (GameObject npc in _npcList)
+        {
+            if (npc == null)
+                _npcList.Remove(npc);
+        }
+
+        if (!(_npcList.Count < _maxNumOfNpc))
+            return;
+
+        if (_npcList.Count < _maxNumOfNpc)
+        {
+            SpawnNpc();
+        }
+    }
+    private void Update()
+    {
+        CheckNpcList();
+    }
+    private void SpawnNpc()
+    {
+        Vector3 randomPostion = _spawnList[UnityEngine.Random.Range(0, _spawnList.Count - 1)].transform.position;
+        GameObject newNpc = Instantiate(_npc,randomPostion,Quaternion.identity); 
+        _npcList.Add(newNpc);
     }
 }
