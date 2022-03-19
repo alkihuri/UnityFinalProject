@@ -17,7 +17,9 @@ public class NpcController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(_player.transform.position);
-        _agent.SetDestination(_player.transform.position);
+        if(Vector3.Distance(transform.position, _player.transform.position)> 0.3f)
+            transform.LookAt(_player.transform.position);
+        if(_agent.isOnNavMesh)
+            _agent.SetDestination(_player.transform.position);
     }
 }
